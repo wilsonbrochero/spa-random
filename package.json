@@ -1,0 +1,22 @@
+{
+  "name": "spa-random",
+  "version": "1.0.0",
+  "description": "SPA Random",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonbrochero/spa-random.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Wilson Brochero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonbrochero/spa-random/issues"
+  },
+  "homepage": "https://github.com/wilsonbrochero/spa-random#readme"
+}
