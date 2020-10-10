@@ -10,6 +10,11 @@ function mensaje(petic, resp) {
     resp.end();
 }
 
+server.get('/spa1', (request, response)=>{
+    let valor_random = Math.random();
+    response.sendFile(path.resolve(__dirname,'spa1.html',{valor_random:valor_random}));
+});
+
 server.on('request', mensaje);
 
 server.listen(port, function() { 
