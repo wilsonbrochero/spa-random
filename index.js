@@ -1,6 +1,5 @@
-var http = require('http');
-
-var server = http.createServer();
+const express = require('express');
+const app = express();
 
 var port = process.env.PORT || 8000 
 
@@ -10,13 +9,13 @@ function mensaje(petic, resp) {
     resp.end();
 }
 
-server.get('/spa1', (request, response)=>{
+app.get('/spa1', (request, response)=>{
     let valor_random = Math.random();
     response.sendFile(path.resolve(__dirname,'spa1.html',{valor_random:valor_random}));
 });
 
-server.on('request', mensaje);
+app.on('request', mensaje);
 
-server.listen(port, function() { 
+app.listen(port, function() { 
     console.log("App is running on port " + port); 
 });

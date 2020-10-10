@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/wilsonbrochero/spa-random/issues"
   },
-  "homepage": "https://github.com/wilsonbrochero/spa-random#readme"
+  "homepage": "https://github.com/wilsonbrochero/spa-random#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
