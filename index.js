@@ -1,21 +1,22 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const router = express.Router();
 
 var port = process.env.PORT || 8000 
 
-function mensaje(petic, resp) {
-    resp.writeHead(200, {'content-type': 'text/plain'});
-    resp.write('Hola Mundo');
-    resp.end();
-}
+app.use('/static', express.static(__dirname + '/public'));
 
-app.get('/spa1', (request, response)=>{
-    let valor_random = Math.random();
-    response.sendFile(path.resolve(__dirname,'spa1.html',{valor_random:valor_random}));
+router.get('/spa1',function(req,res){
+
+    var dato = Math.floor(Math.random() * 10); 
+   
+    res.sendFile(path.join(__dirname+'/spa'+(dato)+'.html'));
+    //__dirname : It will resolve to your project folder.
 });
 
-app.on('request', mensaje);
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
 
-app.listen(port, function() { 
-    console.log("App is running on port " + port); 
-});
+console.log('Running at Port 3000');
