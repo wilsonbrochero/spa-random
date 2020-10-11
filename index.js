@@ -7,7 +7,7 @@ var port = process.env.PORT || 8000
 
 app.use('/static', express.static(__dirname + '/public'));
 
-router.get('/spa1',function(req,res){
+router.get('/banderasradom',function(req,res){
 
     var dato = Math.floor(Math.random() * 10); 
    
