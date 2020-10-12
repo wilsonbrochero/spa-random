@@ -10,6 +10,7 @@ app.use('/static', express.static(__dirname + '/public'));
 router.get('/banderasradom',function(req,res){
 
     var dato = Math.floor(Math.random() * 10); 
+    console.log('entreo un llamado : ' +req.connection.remoteAddress);
    
     res.sendFile(path.join(__dirname+'/spa'+(dato)+'.html'));
     //__dirname : It will resolve to your project folder.
